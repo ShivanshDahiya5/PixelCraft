@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <title>PixelCraft Pro | Ultimate Editor</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
+
 <body>
-<div class="container disable">
+    <div class="container disable">
         <div class="header-row">
             <h2>PixelCraft Pro</h2>
             <button id="theme-toggle"><i class='bx bxs-moon'></i></button>
@@ -41,7 +43,9 @@
                     </div>
 
                     <div class="resize-panel">
-                        <div class="filter-info"><p class="name">Presets</p></div>
+                        <div class="filter-info">
+                            <p class="name">Presets</p>
+                        </div>
                         <div class="preset-buttons">
                             <button data-w="1" data-h="1">1:1</button>
                             <button data-w="16" data-h="9">16:9</button>
@@ -68,44 +72,52 @@
                         <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
                         <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
                         <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
-                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal'></i></button>
                     </div>
                 </div>
-                 </div>
+            </div>
 
             <div class="preview-img">
                 <img src="image-placeholder.jpg" alt="preview-img">
                 <div class="crop-box" id="cropBox">
-                    <div class="handle n"></div><div class="handle s"></div>
-                    <div class="handle e"></div><div class="handle w"></div>
-                    <div class="handle nw"></div><div class="handle ne"></div>
-                    <div class="handle sw"></div><div class="handle se"></div>
+                    <div class="handle n"></div>
+                    <div class="handle s"></div>
+                    <div class="handle e"></div>
+                    <div class="handle w"></div>
+                    <div class="handle nw"></div>
+                    <div class="handle ne"></div>
+                    <div class="handle sw"></div>
+                    <div class="handle se"></div>
                 </div>
             </div>
-             <div class="controls">
-            <div class="row">
-                <button id="undo-btn">Undo</button>
-                <button id="redo-btn">Redo</button>
-                <button class="compare-btn">Compare</button>
-                <button class="reset-filter">Reset</button>
-            </div>
+            <div class="controls">
+                <div class="row">
+                    <button id="undo-btn">Undo</button>
+                    <button id="redo-btn">Redo</button>
+                    <button class="compare-btn">Compare</button>
+                    <button class="reset-filter">Reset</button>
+                </div>
 
-            <div class="quality-box">
-                <div class="filter-info"><p>Quality</p><p class="quality-value">80%</p></div>
-                <input type="range" class="quality-slider" value="80" min="1" max="100">
-            </div>
-             <div class="row main-btns">
-                <input type="file" class="file-input" accept="image/*" hidden>
-                <button class="choose-img">Upload</button>
-                <select class="format-select">
-                    <option value="image/jpeg">JPG</option>
-                    <option value="image/png">PNG</option>
-                    <option value="image/webp">WebP</option>
-                </select>
-                <button class="save-img">Save</button>
+                <div class="quality-box">
+                    <div class="filter-info">
+                        <p>Quality</p>
+                        <p class="quality-value">80%</p>
+                    </div>
+                    <input type="range" class="quality-slider" value="80" min="1" max="100">
+                </div>
+                <div class="row main-btns">
+                    <input type="file" class="file-input" accept="image/*" hidden>
+                    <button class="choose-img">Upload</button>
+                    <select class="format-select">
+                        <option value="image/jpeg">JPG</option>
+                        <option value="image/png">PNG</option>
+                        <option value="image/webp">WebP</option>
+                    </select>
+                    <button class="save-img">Save</button>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
+
 </html>
