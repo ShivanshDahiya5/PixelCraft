@@ -5,3 +5,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #E3F2FD;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #0f172a;
+}
