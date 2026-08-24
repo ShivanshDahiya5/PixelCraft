@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -57,10 +58,11 @@ body.dark .container {
     margin: 20px 0;
     min-height: 335px;
 }
+
 .editor-panel {
     padding: 15px;
     width: 280px;
-border-radius: 5px;
+    border-radius: 5px;
     border: 1px solid #ccc;
 }
 
@@ -89,6 +91,7 @@ body.dark .filter .options button {
     color: #fff !important;
     border-color: #5372F0 !important;
 }
+
 .preview-img {
     flex-grow: 1;
     margin-left: 20px;
@@ -111,7 +114,7 @@ body.dark .filter .options button {
     display: none;
     position: absolute;
     border: 2px dashed #5372F0;
- background: rgba(83, 114, 240, 0.1);
+    background: rgba(83, 114, 240, 0.1);
     cursor: move;
     box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
     z-index: 10;
