@@ -60,3 +60,15 @@ body.dark .container {
 .editor-panel {
     padding: 15px;
     width: 280px;
+border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+body.dark .editor-panel {
+    border-color: #334155;
+}
+
+.filter .options button {
+    width: calc(100% / 2 - 4px);
+    height: 35px;
+ 
