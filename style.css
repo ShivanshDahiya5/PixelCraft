@@ -71,4 +71,15 @@ body.dark .editor-panel {
 .filter .options button {
     width: calc(100% / 2 - 4px);
     height: 35px;
- 
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-radius: 3px;
+}
+
+body.dark .filter .options button {
+    background: #334155;
+    color: #cbd5e1;
+    border-color: #475569;
+}
