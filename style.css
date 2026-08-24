@@ -83,3 +83,13 @@ body.dark .filter .options button {
     color: #cbd5e1;
     border-color: #475569;
 }
+
+.filter button.active {
+    background: #5372F0 !important;
+    color: #fff !important;
+    border-color: #5372F0 !important;
+}
+.preview-img {
+    flex-grow: 1;
+    margin-left: 20px;
+    border-radius: 5px;
