@@ -93,3 +93,10 @@ body.dark .filter .options button {
     flex-grow: 1;
     margin-left: 20px;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
