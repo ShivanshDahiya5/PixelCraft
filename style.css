@@ -51,3 +51,12 @@ body.dark .container {
     opacity: 0.5;
     pointer-events: none;
 }
+
+.wrapper {
+    display: flex;
+    margin: 20px 0;
+    min-height: 335px;
+}
+.editor-panel {
+    padding: 15px;
+    width: 280px;
