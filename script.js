@@ -136,3 +136,12 @@ const updateFilters = () => {
     previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) blur(${blur}px) hue-rotate(${hue}deg) sepia(${sepia}%) grayscale(${grayscale}%) invert(${inversion}%)`;
     previewImg.style.transform = `rotate(${rotate}deg) scale(${flipH}, ${flipV})`;
     const activeBtn = document.querySelector(".filter .active");
+if (activeBtn) {
+        const id = activeBtn.id;
+        const valMap = { brightness, saturation, contrast, "hue-rotate": hue, blur, sepia, grayscale, inversion };
+        if (valMap[id] !== undefined) {
+            filterSlider.value = valMap[id];
+            filterValue.innerText = `${filterSlider.value}${id === "blur" ? "px" : (id === "hue-rotate" ? "deg" : "%")}`;
+        }
+    }
+};
