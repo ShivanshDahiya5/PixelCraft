@@ -22,3 +22,11 @@ cropBox = document.querySelector("#cropBox"),
     redoBtn = document.querySelector("#redo-btn"),
     compareBtn = document.querySelector(".compare-btn"),
     rotateOptions = document.querySelectorAll(".rotate button");
+
+let brightness = 100, saturation = 100, contrast = 100, hue = 0, blur = 0, sepia = 0, grayscale = 0, inversion = 0;
+let rotate = 0, flipH = 1, flipV = 1;
+let historyStack = [], redoStack = [], ogAspectRatio = 1, isCropping = false;
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
