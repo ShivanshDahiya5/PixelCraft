@@ -96,3 +96,7 @@ window.addEventListener("mousemove", (e) => {
         let t = Math.max(0, Math.min(startT + dy, rect.height - cropBox.offsetHeight));
         cropBox.style.left = l + "px"; cropBox.style.top = t + "px";
     }
+
+    if(activeResizing) {
+        if(currentHandle.includes("e")) cropBox.style.width = Math.min(startW + dx, rect.width - cropBox.offsetLeft) + "px";
+        if(currentHandle.includes("s")) cropBox.style.height = Math.min(startH + dy, rect.height - cropBox.offsetTop) + "px";
