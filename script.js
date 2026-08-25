@@ -110,3 +110,12 @@ window.addEventListener("mousemove", (e) => {
         }
     }
 });
+
+window.addEventListener("mouseup", () => { activeDragging = activeResizing = false; });
+
+document.querySelector(".apply-crop").addEventListener("click", () => {
+    saveState();
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    const sX = previewImg.naturalWidth / previewImg.offsetWidth;
+const sY = previewImg.naturalHeight / previewImg.offsetHeight;
