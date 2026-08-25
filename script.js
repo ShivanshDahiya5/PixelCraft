@@ -79,3 +79,12 @@ cropBox.addEventListener("mousedown", (e) => {
     
     if(e.target.classList.contains("handle")) {
         activeResizing = true;
+ currentHandle = e.target.classList[1];
+    } else {
+        activeDragging = true;
+    }
+    e.preventDefault();
+});
+
+window.addEventListener("mousemove", (e) => {
+    if(!isCropping) return;
