@@ -63,3 +63,11 @@ redoBtn.onclick = () => {
 
 const applyState = (s) => {
     previewImg.src = s.src;
+({brightness, saturation, contrast, hue, blur, sepia, grayscale, inversion} = s.f);
+    ({rotate, flipH, flipV} = s.t);
+    widthInput.value = s.d.w; heightInput.value = s.d.h;
+    updateFilters();
+};
+
+let activeDragging = false, activeResizing = false, currentHandle = "";
+let startX, startY, startW, startH, startL, startT;
