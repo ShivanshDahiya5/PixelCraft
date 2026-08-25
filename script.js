@@ -88,3 +88,11 @@ cropBox.addEventListener("mousedown", (e) => {
 
 window.addEventListener("mousemove", (e) => {
     if(!isCropping) return;
+     const rect = document.querySelector(".preview-img").getBoundingClientRect();
+    const dx = e.clientX - startX, dy = e.clientY - startY;
+
+    if(activeDragging) {
+        let l = Math.max(0, Math.min(startL + dx, rect.width - cropBox.offsetWidth));
+        let t = Math.max(0, Math.min(startT + dy, rect.height - cropBox.offsetHeight));
+        cropBox.style.left = l + "px"; cropBox.style.top = t + "px";
+    }
