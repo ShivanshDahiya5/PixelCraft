@@ -100,3 +100,13 @@ window.addEventListener("mousemove", (e) => {
     if(activeResizing) {
         if(currentHandle.includes("e")) cropBox.style.width = Math.min(startW + dx, rect.width - cropBox.offsetLeft) + "px";
         if(currentHandle.includes("s")) cropBox.style.height = Math.min(startH + dy, rect.height - cropBox.offsetTop) + "px";
+        if(currentHandle.includes("w")) {
+            let nw = Math.max(50, startW - dx);
+            cropBox.style.width = nw + "px"; cropBox.style.left = (startL + (startW - nw)) + "px";
+        }
+        if(currentHandle.includes("n")) {
+            let nh = Math.max(50, startH - dy);
+            cropBox.style.height = nh + "px"; cropBox.style.top = (startT + (startH - nh)) + "px";
+        }
+    }
+});
