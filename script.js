@@ -131,3 +131,8 @@ canvas.width = cropBox.offsetWidth * sX;
     brightness = 100; saturation = 100; contrast = 100; hue = 0; blur = 0; sepia = 0; grayscale = 0; inversion = 0;
     updateFilters();
 });
+
+const updateFilters = () => {
+    previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) blur(${blur}px) hue-rotate(${hue}deg) sepia(${sepia}%) grayscale(${grayscale}%) invert(${inversion}%)`;
+    previewImg.style.transform = `rotate(${rotate}deg) scale(${flipH}, ${flipV})`;
+    const activeBtn = document.querySelector(".filter .active");
