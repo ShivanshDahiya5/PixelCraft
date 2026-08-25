@@ -30,3 +30,15 @@ let historyStack = [], redoStack = [], ogAspectRatio = 1, isCropping = false;
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     const isDark = document.body.classList.contains("dark");
+ themeToggle.innerHTML = isDark ? "<i class='bx bxs-sun'></i>" : "<i class='bx bxs-moon'></i>";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+const captureState = () => {
+    return JSON.stringify({
+        src: previewImg.src,
+        f: { brightness, saturation, contrast, hue, blur, sepia, grayscale, inversion },
+        t: { rotate, flipH, flipV },
+        d: { w: widthInput.value, h: heightInput.value }
+    });
+};
