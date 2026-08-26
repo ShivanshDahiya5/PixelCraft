@@ -171,3 +171,10 @@ else if(btn.id === "right") rotate += 90;
         updateFilters();
     };
 });
+
+filterSlider.addEventListener("change", saveState);
+filterSlider.addEventListener("input", () => {
+    const id = document.querySelector(".filter .active").id;
+    const val = filterSlider.value;
+    if(id === "brightness") brightness = val;
+    else if(id === "saturation") saturation = val;
