@@ -231,3 +231,13 @@ widthInput.addEventListener("input", () => {
         heightInput.value = Math.round(widthInput.value / ogAspectRatio);
     }
 });
+
+const undoAction = () => {
+    if (!historyStack.length) return;
+    redoStack.push(captureState());
+    const s = JSON.parse(historyStack.pop());
+    ({brightness, saturation, contrast, hue, blur, sepia, grayscale, inversion} = s.f);
+    ({rotate, flipH, flipV} = s.t);
+    previewImg.src = s.src; 
+    updateFilters();
+};
