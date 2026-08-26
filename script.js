@@ -226,3 +226,8 @@ ctx.scale(flipH, flipV);
     link.href = canvas.toDataURL(formatSelect.value, qualitySlider.value / 100);
     link.click();
 };
+widthInput.addEventListener("input", () => {
+    if (aspectCheck.checked && ogAspectRatio) {
+        heightInput.value = Math.round(widthInput.value / ogAspectRatio);
+    }
+});
