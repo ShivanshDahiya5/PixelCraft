@@ -160,3 +160,8 @@ const isSpecial = ["resize", "crop"].includes(btn.id);
         updateFilters();
     };
 });
+
+rotateOptions.forEach(btn => {
+    btn.onclick = () => {
+        saveState();
+        if(btn.id === "left") rotate -= 90;
