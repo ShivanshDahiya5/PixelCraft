@@ -194,3 +194,7 @@ resetFilterBtn.onclick = () => {
     widthInput.value = previewImg.naturalWidth; heightInput.value = previewImg.naturalHeight;
     updateFilters();
 };
+
+compareBtn.onmousedown = () => { previewImg.style.filter = "none"; previewImg.style.transform = "none"; };
+compareBtn.onmouseup = updateFilters;
+compareBtn.onmouseleave = updateFilters;
