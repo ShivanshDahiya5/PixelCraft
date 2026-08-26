@@ -246,3 +246,5 @@ const redoAction = () => {
     historyStack.push(captureState());
     applyState(JSON.parse(redoStack.pop()));
 };
+undoBtn.onclick = undoAction;
+redoBtn.onclick = redoAction;
