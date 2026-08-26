@@ -145,3 +145,9 @@ if (activeBtn) {
         }
     }
 };
+
+filterOptions.forEach(btn => {
+    btn.onclick = () => {
+        document.querySelector(".active").classList.remove("active");
+        btn.classList.add("active");
+        filterName.innerText = btn.innerText;
