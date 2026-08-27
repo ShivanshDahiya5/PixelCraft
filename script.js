@@ -119,6 +119,7 @@ document.querySelector(".apply-crop").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
     const sX = previewImg.naturalWidth / previewImg.offsetWidth;
     const sY = previewImg.naturalHeight / previewImg.offsetHeight;
+
     canvas.width = cropBox.offsetWidth * sX;
     canvas.height = cropBox.offsetHeight * sY;
     ctx.filter = getComputedStyle(previewImg).filter;
@@ -131,7 +132,6 @@ document.querySelector(".apply-crop").addEventListener("click", () => {
     brightness = 100; saturation = 100; contrast = 100; hue = 0; blur = 0; sepia = 0; grayscale = 0; inversion = 0;
     updateFilters();
 });
-
 const updateFilters = () => {
     previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) blur(${blur}px) hue-rotate(${hue}deg) sepia(${sepia}%) grayscale(${grayscale}%) invert(${inversion}%)`;
     previewImg.style.transform = `rotate(${rotate}deg) scale(${flipH}, ${flipV})`;
@@ -145,7 +145,6 @@ const updateFilters = () => {
         }
     }
 };
-
 filterOptions.forEach(btn => {
     btn.onclick = () => {
         document.querySelector(".active").classList.remove("active");
@@ -231,7 +230,6 @@ widthInput.addEventListener("input", () => {
         heightInput.value = Math.round(widthInput.value / ogAspectRatio);
     }
 });
-
 const undoAction = () => {
     if (!historyStack.length) return;
     redoStack.push(captureState());

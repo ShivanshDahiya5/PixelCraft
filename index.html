@@ -66,6 +66,7 @@
                         <button class="apply-crop">Apply Crop</button>
                     </div>
                 </div>
+
                 <div class="rotate">
                     <label class="title">Rotate & Flip</label>
                     <div class="options">
@@ -90,34 +91,37 @@
                     <div class="handle se"></div>
                 </div>
             </div>
-            <div class="controls">
-                <div class="row">
-                    <button id="undo-btn">Undo</button>
-                    <button id="redo-btn">Redo</button>
-                    <button class="compare-btn">Compare</button>
-                    <button class="reset-filter">Reset</button>
-                </div>
+        </div>
 
-                <div class="quality-box">
-                    <div class="filter-info">
-                        <p>Quality</p>
-                        <p class="quality-value">80%</p>
-                    </div>
-                    <input type="range" class="quality-slider" value="80" min="1" max="100">
+        <div class="controls">
+            <div class="row">
+                <button id="undo-btn">Undo</button>
+                <button id="redo-btn">Redo</button>
+                <button class="compare-btn">Compare</button>
+                <button class="reset-filter">Reset</button>
+            </div>
+
+            <div class="quality-box">
+                <div class="filter-info">
+                    <p>Quality</p>
+                    <p class="quality-value">80%</p>
                 </div>
-                <div class="row main-btns">
-                    <input type="file" class="file-input" accept="image/*" hidden>
-                    <button class="choose-img">Upload</button>
-                    <select class="format-select">
-                        <option value="image/jpeg">JPG</option>
-                        <option value="image/png">PNG</option>
-                        <option value="image/webp">WebP</option>
-                    </select>
-                    <button class="save-img">Save</button>
-                </div>
+                <input type="range" class="quality-slider" value="80" min="1" max="100">
+            </div>
+
+            <div class="row main-btns">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Upload</button>
+                <select class="format-select">
+                    <option value="image/jpeg">JPG</option>
+                    <option value="image/png">PNG</option>
+                    <option value="image/webp">WebP</option>
+                </select>
+                <button class="save-img">Save</button>
             </div>
         </div>
-        <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
